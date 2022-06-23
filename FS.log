@@ -709,3 +709,9 @@
 2022-06-23 13:14:50,975 - matplotlib.font_manager - DEBUG - findfont: score(<Font 'Rockwell' (ROCK.TTF) normal normal 400 normal>) = 10.05
 2022-06-23 13:14:50,975 - matplotlib.font_manager - DEBUG - findfont: score(<Font 'MV Boli' (mvboli.ttf) normal normal 400 normal>) = 10.05
 2022-06-23 13:14:50,975 - matplotlib.font_manager - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\Users\\ranuc\\anaconda3\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000.
+2022-06-23 13:43:25,546 - matplotlib.colorbar - DEBUG - locator: <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002358BE053D0>
+2022-06-23 13:43:25,546 - matplotlib.colorbar - DEBUG - Using auto colorbar locator <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002358BE053D0> on colorbar
+2022-06-23 13:43:25,546 - matplotlib.colorbar - DEBUG - Setting pcolormesh
+2022-06-23 13:44:10,127 - matplotlib.colorbar - DEBUG - locator: <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002358D7295B0>
+2022-06-23 13:44:10,127 - matplotlib.colorbar - DEBUG - Using auto colorbar locator <matplotlib.colorbar._ColorbarAutoLocator object at 0x000002358D7295B0> on colorbar
+2022-06-23 13:44:10,127 - matplotlib.colorbar - DEBUG - Setting pcolormesh

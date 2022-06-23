@@ -141,9 +141,8 @@ perm_imp       = fs.permutation_feature_importance(
 features_perm = perm_imp['features'].iloc[0:20].tolist()
 df[features_perm].corr().abs().mean(axis=1).mean()
 
-list(set(features_rfe) & set(features_mrmr))
-list(set(features_mrmr) & set(features_perm))
-list(set(features_rfe) & set(features_perm))
+
+### Comparison
 
 features_sel_dict = {'corr': corr_feat,
                      'mi': features_mi,
