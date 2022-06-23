@@ -55,7 +55,7 @@ df[features_mi].corr().abs().mean(axis=1).mean()
 # comparison corr vs mi
 df_compar = df_corr.merge(df_mi, how='inner', on='features')
 df_compar[['pearsonr', 'mi']].abs().corr()
-df_compar[['spearmanr', 'mi']].abs().corr()
+# df_compar[['spearmanr', 'mi']].abs().corr()
 
 
 ### F-stat:
@@ -137,12 +137,39 @@ perm_imp       = fs.permutation_feature_importance(
                                         scoring_metric='roc_auc',
                                         n_repeats=10,
                                         seed=seed)
+
 features_perm = perm_imp['features'].iloc[0:20].tolist()
 df[features_perm].corr().abs().mean(axis=1).mean()
 
 list(set(features_rfe) & set(features_mrmr))
 list(set(features_mrmr) & set(features_perm))
 list(set(features_rfe) & set(features_perm))
+
+features_sel_dict = {'corr': corr_feat,
+                     'mi': features_mi,
+                     'f_stat': features_f,
+                     'mt_mw': features_mt,
+                     'rfe': features_rfe,
+                     'mrmr': features_mrmr,
+                     'perm': features_perm}
+
+
+df_res  = pd.DataFrame(columns=['features'])
+
+for k, v in features_sel_dict.items():
+
+    df_l    = pd.DataFrame(v).rename(columns={0:'features'})
+    df_l[k] = 1
+    df_res  = df_res.merge(df_l, how='outer', on="features")
+
+df_res = df_res.fillna(0)
+sns.heatmap(df_res.select_dtypes(exclude='object'), yticklabels=df_res['features'])
+
+
+
+
+
+
 
 
 ### for DNA MEthylation:
