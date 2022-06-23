@@ -1,0 +1,5 @@
+2022-06-14 22:41:13,837 - FeatureSelection - INFO - Initializing FeatureSelection
+2022-06-14 22:41:57,455 - numexpr.utils - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2022-06-14 22:41:57,455 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2022-06-14 22:41:57,471 - FeatureSelection - INFO - Found 0 columns with more than 0.1 missing values
+2022-06-14 22:42:45,385 - FeatureSelection - INFO - Found 0 columns with more than 0.1 missing values
